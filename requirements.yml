@@ -14,7 +14,7 @@ dependencies:
   - base58=2.1.1=pyhd8ed1ab_0
   - bleach=4.0.0=pyhd3eb1b0_0
   - blinker=1.4=py36haa95532_0
-  - bokeh=2.2.2=py36_0
+  - bokeh=2.2.2
   - boost-cpp=1.73.0=h2bbff1b_11
   - boto3=1.18.21=pyhd3eb1b0_0
   - botocore=1.21.41=pyhd3eb1b0_1
