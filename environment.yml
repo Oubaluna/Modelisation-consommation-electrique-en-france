@@ -11,13 +11,13 @@ dependencies:
   - numpy=1.20.1
   - numpy-base=1.20.1
   - numpydoc=1.1.0
-  - pep8=1.7.1=py38_0
-  - scikit-image=0.18.1=py38hf11a4ad_0
-  - scikit-learn=0.24.1=py38hf11a4ad_0
-  - scipy=1.6.2=py38h66253e8_1
-  - seaborn=0.11.1=pyhd3eb1b0_0
-  - sqlalchemy=1.4.7=py38h2bbff1b_0
-  - sqlite=3.35.4=h2bbff1b_0
+  - pep8=1.7.1
+  - scikit-image=0.18.1
+  - scikit-learn=0.24.1
+  - scipy=1.6.2
+  - seaborn=0.11.1
+  - sqlalchemy=1.4.7
+  - sqlite=3.35.4
   - pip
   - pip:
     - altair==4.1.0
