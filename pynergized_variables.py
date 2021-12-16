@@ -8,7 +8,7 @@ import numpy as np
 ###############################
 
 # => CONSO
-conso = pd.read_csv('clean_data\ener_conso_full.csv', 
+conso = pd.read_csv('ener_conso_full.csv', 
                  parse_dates=[0], 
                  index_col=0, 
                  squeeze=True)
