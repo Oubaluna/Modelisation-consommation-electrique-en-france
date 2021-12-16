@@ -4,6 +4,10 @@
 
 L'objectif de ce projet est de réaliser une prédiction de la consommation électrique française à partir des deux jeux de données suivants :
 
+#Streamlit : 
+
+https://share.streamlit.io/oubaluna/modelisation-consommation-electrique-en-france/main/pynergized.py
+
 /!\ les données sont en téléchargement libre aux adresses ci-dessous :
 
 Non disponible dans le repo étant donné leurs tailles
