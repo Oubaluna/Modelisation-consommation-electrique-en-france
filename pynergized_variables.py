@@ -428,7 +428,7 @@ dataframeclean=data_meteo_prod_region.head(10)
 Dataclean10 = '''Ainsi nous avons un dataset clean avec l'ensemble des données énéergétiques et météorologiques pour
 appréhender la suite avec comme variables principales:'''
 
-data_meteo_prod=pd.read_csv('clean_data/data_meteo_prod.csv')
+data_meteo_prod=pd.read_csv('data_meteo_prod.csv')
 
 ########ACP
 
