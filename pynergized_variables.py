@@ -14,14 +14,14 @@ conso = pd.read_csv('ener_conso_full.csv',
                  squeeze=True)
 
 # => METEO
-df_meteo = pd.read_csv('clean_data\clean_data_meteo_3h.csv',index_col=0)
+df_meteo = pd.read_csv('clean_data_meteo_3h.csv',index_col=0)
 to_drop = ['regioncode','latitude', 'longitude', 'altitude']
 df_meteo = df_meteo.drop(to_drop, axis=1)
 df_meteo = df_meteo['2012-12-31':'2020-01-01']
 df_meteo.index = pd.to_datetime(df_meteo.index)
 
 # => ACP
-df_acp = pd.read_csv('clean_data/df_acp.csv',index_col=0)
+df_acp = pd.read_csv('df_acp.csv',index_col=0)
 df_acp.index = pd.to_datetime(df_acp.index)
 
 
@@ -68,13 +68,13 @@ df_acp_3h = df_acp.resample('3h').agg(function_to_apply)
 
 
 # => Pour Pydeck
-geo_df = pd.read_csv('clean_data\geo_df.csv')
+geo_df = pd.read_csv('geo_df.csv')
 
 # => Pour histo
-df_histo = pd.read_csv('clean_data/filiere_histo.csv')
+df_histo = pd.read_csv('filiere_histo.csv')
 
 # => Pour heatmap
-df_meteo_prod = pd.read_csv('clean_data/data_meteo_prod.csv',index_col=0)
+df_meteo_prod = pd.read_csv('data_meteo_prod.csv',index_col=0)
 
 ###########################################################################
 ###########################################################################
@@ -393,7 +393,7 @@ Dataclean5 = '''
 C\ Création de 3 dataframe par temporalité : Année, Mois, Jours
 NB : suppression de 2021 pour travailler sur un bloc temporel sans 'trou' '''
 
-data_clean_by_year=pd.read_csv('clean_data/data_clean_by_year.csv')
+data_clean_by_year=pd.read_csv('data_clean_by_year.csv')
 prod1=data_clean_by_year.head(5)
 
 Dataclean6= ''' D\ Cleaning des données météo et création d'un dataset clean avec la consommation et la météo'''
@@ -422,7 +422,7 @@ code ='''data_clean['date'] =  pd.to_datetime(data_clean['date'])
 Dataclean8='''
 E\ MERGE avec la méthode INNER pour obtenir un dataset clean de NaN en utilisant la journée et la région'''
 Dataclean9=''' Pour finir nous fusionnons l'ensemble de nos data clean par région et par jours avec un pas de temps de 1 jour. '''
-data_meteo_prod_region=pd.read_csv('clean_data/data_meteo_prod_region.csv')
+data_meteo_prod_region=pd.read_csv('data_meteo_prod_region.csv')
 dataframeclean=data_meteo_prod_region.head(10)
 
 Dataclean10 = '''Ainsi nous avons un dataset clean avec l'ensemble des données énéergétiques et météorologiques pour
@@ -481,5 +481,5 @@ l'intégrer au dataset réduit via l'ACP.'''
 
 acp12 = '''Le nouveau dataframe avec l'ACP est le suivant'''
 
-df_acp=pd.read_csv('clean_data/df_acp.csv')
+df_acp=pd.read_csv('df_acp.csv')
 dataframeclean=df_acp.head(10)
