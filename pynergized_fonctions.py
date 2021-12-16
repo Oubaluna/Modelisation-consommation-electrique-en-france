@@ -397,8 +397,8 @@ def plot_scatter_bokeh_autre():
 
 
 def ACP_graph1():
-     conso = pd.read_csv('clean_data/ener_conso_full.csv',parse_dates=[0], index_col=0, squeeze=True)
-     meteo = pd.read_csv('clean_data/clean_data_meteo_3h.csv')
+     conso = pd.read_csv('ener_conso_full.csv',parse_dates=[0], index_col=0, squeeze=True)
+     meteo = pd.read_csv('clean_data_meteo_3h.csv')
      conso = conso.resample('3H').sum()
      meteo['date'] = pd.to_datetime(meteo['date'])
      meteo = meteo.set_index('date')
@@ -420,8 +420,8 @@ def ACP_graph1():
 
 
 def ACP_graph2():
-     conso = pd.read_csv('clean_data/ener_conso_full.csv',parse_dates=[0], index_col=0, squeeze=True)
-     meteo = pd.read_csv('clean_data/clean_data_meteo_3h.csv')
+     conso = pd.read_csv('ener_conso_full.csv',parse_dates=[0], index_col=0, squeeze=True)
+     meteo = pd.read_csv('clean_data_meteo_3h.csv')
      conso = conso.resample('3H').sum()
      meteo['date'] = pd.to_datetime(meteo['date'])
      meteo = meteo.set_index('date')
@@ -443,8 +443,8 @@ def ACP_graph2():
 
 
 def visu_ACP():
-    conso = pd.read_csv('clean_data/ener_conso_full.csv',parse_dates=[0], index_col=0, squeeze=True)
-    meteo = pd.read_csv('clean_data/clean_data_meteo_3h.csv')
+    conso = pd.read_csv('ener_conso_full.csv',parse_dates=[0], index_col=0, squeeze=True)
+    meteo = pd.read_csv('clean_data_meteo_3h.csv')
     conso = conso.resample('3H').sum()
     meteo['date'] = pd.to_datetime(meteo['date'])
     meteo = meteo.set_index('date')
@@ -479,8 +479,8 @@ def visu_ACP():
 
 
 def plot_heatmap2():
-    conso = pd.read_csv('clean_data/ener_conso_full.csv',parse_dates=[0], index_col=0, squeeze=True)
-    meteo = pd.read_csv('clean_data/clean_data_meteo_3h.csv')
+    conso = pd.read_csv('ener_conso_full.csv',parse_dates=[0], index_col=0, squeeze=True)
+    meteo = pd.read_csv('clean_data_meteo_3h.csv')
     conso = conso.resample('3H').sum()
     meteo['date'] = pd.to_datetime(meteo['date'])
     meteo = meteo.set_index('date')
@@ -716,17 +716,17 @@ def set_exploration():
     st.subheader(Dataclean5)
     
     st.write('''Dataset clean par année (Aperçu)''')
-    data_clean_by_year=pd.read_csv('clean_data/data_clean_by_year.csv')
+    data_clean_by_year=pd.read_csv('data_clean_by_year.csv')
     prod1=data_clean_by_year.head(5)
     st.dataframe(prod1.style.format("{:.0f}"))
     
     st.write('''Dataset clean par mois (Aperçu)''')
-    data_clean_by_month=pd.read_csv('clean_data/data_clean_by_month.csv')
+    data_clean_by_month=pd.read_csv('data_clean_by_month.csv')
     prod2=data_clean_by_month.head(5)
     st.dataframe(prod2.style.format("{:.0f}"))
 
     st.write('''Dataset clean par jours (Aperçu)''')
-    data_clean_by_days=pd.read_csv('clean_data/data_clean_by_days.csv')
+    data_clean_by_days=pd.read_csv('data_clean_by_days.csv')
     prod3=data_clean_by_days.head(5)
     st.dataframe(prod3.style.format("{:.0f}"))
 
